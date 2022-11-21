@@ -31,10 +31,10 @@ const Cart = () => {
                   Total <span>${total}</span>
                   </h4>
                </div>
-               <button className="transition-all duration-300 ease-linear text-white text-xl mt-4 items-center font-medium rounded bg-darkred w-2/5 mx-auto py-2 tracking-wider hover:bg-red-700" onClick={() => dispatch(openModal())}>
+               <button className="transition-all duration-300 ease-linear text-darkred text-xl mt-4 items-center font-medium rounded bg-white border-2 border-solid border-darkred w-2/5 mx-auto py-2 tracking-widest hover:text-white hover:bg-darkred" onClick={() => dispatch(openModal())}>
                   Clear Cart
                </button>
-               <button className="transition-all duration-300 ease-linear mt-4 text-white text-xl items-center font-medium rounded bg-darkblue w-2/5 mx-auto py-2 tracking-wider hover:bg-blue-600" onClick={() => {
+               <button className="transition-all duration-300 ease-linear mt-4 text-darkblue bg-white hover:text-white hover:bg-darkblue text-xl items-center font-medium rounded border-2 border-solid border-darkblue w-2/5 mx-auto py-2 tracking-widest hover:bg-blue-600" onClick={() => {
                   alert("Thank you for your order!");
                   dispatch(clearCart())
                }}>

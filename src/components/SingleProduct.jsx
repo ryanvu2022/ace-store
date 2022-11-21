@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Rating from './Rating';
 import { addToCart, removeFromCart } from '../features/cart/cartSlice';
+import { Link } from 'react-router-dom';
 
 const SingleProduct = ({ item }) => {
    const { id, name, price, image, inStock, ratings, fastDelivery } = item;
@@ -11,8 +12,10 @@ const SingleProduct = ({ item }) => {
    const dispatch = useDispatch();
 
    return (
-      <div className="shadow-2xl sm:w-64 ss:w-72 w-88 m-2.5 p-4 rounded-md bg-white cursor-pointer">
-         <img src={image} alt={name}/>
+      <div className="shadow-2xl sm:w-64 ss:w-72 w-88 m-2.5 p-4 rounded-md bg-white">
+         <Link to={`/product/${id}`}>
+            <img src={image} alt={name}/>
+         </Link>
          <div>
             <h1 className="font-medium sm:text-base text-lg mt-1">{name}</h1>
             <h5 className="tracking-wide font-medium text-lg">${price}</h5>
@@ -40,9 +43,9 @@ const SingleProduct = ({ item }) => {
                <button className="transition-all duration-300 ease-linear text-lg sm:text-base bg-gray-600 hover:bg-gray-400 text-white py-2 px-4 mr-2 my-2 rounded-md" disabled>
                   Out of Stock
                </button>
-            )}
-        
+            )}        
          </div>
+         
       </div>
    )
 }

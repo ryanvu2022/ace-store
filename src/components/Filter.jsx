@@ -7,7 +7,6 @@ const Filter = () => {
    const { byRating, byFastDelivery, byStock, sort } = useSelector(store => store.product)
    const dispatch = useDispatch();
    
-   console.log(byRating, byFastDelivery, byStock, sort)
    return (
       <div className="flex flex-col sm:w-96 w-full bg-darkblue mt-3 p-4 text-white h-56 sm:h-full">
          <span className="pb-3 text-2xl sm:text-xl sm:text-left text-center">Filter Products</span>

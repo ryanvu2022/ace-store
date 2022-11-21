@@ -7,7 +7,7 @@ const CartItem = ({ item }) => {
    const dispatch = useDispatch();
 
    return (
-      <div key={item.id} className="grid items-center grid-cols-cartgrid gap-x-6 my-6 mx-0">
+      <div className="grid items-center grid-cols-cartgrid gap-x-6 my-6 mx-0">
          <img src={item.image} alt={item.name} className="rounded w-24 h-24 object-cover" />
 
          <div>
