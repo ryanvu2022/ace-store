@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import Cart from "./components/Cart";
 import PageNotFound from "./components/PageNotFound";
 import ProductDetail from "./components/ProductDetail";
+import Footer from "./components/Footer";
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </div>
+      <Footer />
     </div>
   )
 }

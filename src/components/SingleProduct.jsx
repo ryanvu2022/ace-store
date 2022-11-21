@@ -35,7 +35,7 @@ const SingleProduct = ({ item }) => {
                </button>
             )}
             {!cart.some(p => p.id === id) && inStock && (
-               <button className="transition-all duration-300 ease-linear text-lg sm:text-base bg-blue-600 hover:bg-blue-400 text-white py-2 px-4 mr-2 my-2 rounded-md" onClick={() => dispatch(addToCart(item))}>
+               <button className="transition-all duration-300 ease-linear text-lg sm:text-base bg-darkgreen hover:bg-hovergreen text-white py-2 px-4 mr-2 my-2 rounded-md" onClick={() => dispatch(addToCart(item))}>
                   Add to Cart
                </button>
             )}

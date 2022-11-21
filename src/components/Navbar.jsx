@@ -11,7 +11,7 @@ const Navbar = () => {
    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
    return (
-      <nav className="bg-darkblue w-full px-8 py-5 text-white fixed z-50 inset-x-0 top-0">
+      <nav className="bg-darkgreen w-full px-8 py-5 text-white fixed z-50 inset-x-0 top-0">
          <div className="w-full flex justify-between items-center m-0">
             <h2 className="mb-0 tracking-widest text-3xl cursor-pointer">
                <Link to="/" onClick={() => setIsDropdownOpen(false)}>Middy - Redux</Link>
@@ -21,8 +21,8 @@ const Navbar = () => {
                <Dropdown.Toggle>
                   <div className="block relative cursor-pointer" onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
                      <CartIcon />
-                     <div className="absolute -top-2.5 -right-2.5 w-6 h-6 bg-lightblue rounded-full flex items-center justify-center">
-                        <p className="mb-0 text-lg">{amount}</p>
+                     <div className="absolute -top-2.5 -right-2.5 w-6 h-6 bg-lightgreen rounded-full flex items-center justify-center">
+                        <p className="mb-0 text-lg text-red-600">{amount}</p>
                      </div>              
                   </div>         
                </Dropdown.Toggle>

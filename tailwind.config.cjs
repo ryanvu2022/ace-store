@@ -4,8 +4,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        darkblue: "#083AA9",
-        lightblue: "#8fc5e9",
+        darkgreen: "#019267",
+        lightgreen: "#BAFFB4",
+        hovergreen: "#01be67",
         darkred: "#FF1E1E",
       },
       gridTemplateColumns: {

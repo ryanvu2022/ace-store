@@ -1,7 +1,6 @@
 import React from "react";
 import SingleProduct from "./SingleProduct";
 import Filter from "./Filter";
-import { AiOutlineCopyrightCircle } from "react-icons/ai";
 import { products } from "../products/products";
 import { useSelector } from "react-redux";
 
@@ -40,19 +39,8 @@ const Home = () => {
                      item={item}
                   />
                ))}
-            </div>
-            <div className="flex flex-col justify-center items-center mt-4 mb-2 text-lg tracking-wider">
-               <p className=" flex flex-row">Ryan Vu 
-                  <span className="relative top-1.5 mx-1"><AiOutlineCopyrightCircle /></span> 
-                  {new Date().getFullYear()} </p>
-               <div>
-                  Pictures from <a href="https://www.uniqlo.com/ca/en/men/tops/ut-graphic-tees">UNIQLO</a>
-                  <img className="w-5 relative bottom-0.5 inline ml-1" src="https://tinyurl.com/uniqloz" />                                    
-               </div>
-            </div>  
-         </div>          
-         
-           
+            </div>            
+         </div>              
       </div>
    )
 }

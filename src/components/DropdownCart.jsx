@@ -13,12 +13,12 @@ const DropdownCart = ({ setIsDropdownOpen }) => {
          {cart.length > 0
             ?  <>
                   <Link to="/cart" className="flex items-center justify-center">
-                     <button className="transition-all duration-300 ease-linear bg-darkblue text-white hover:bg-blue-500 text-xl tracking-wide w-full py-2 px-4 m-4 rounded" onClick={() => setIsDropdownOpen(false)}>
+                     <button className="transition-all duration-300 ease-linear bg-darkgreen text-white hover:bg-hovergreen text-xl tracking-wide w-full py-2 px-4 m-4 rounded" onClick={() => setIsDropdownOpen(false)}>
                         Go to Cart
                      </button>
                   </Link>
                   {cart.map(item => (
-                     <span className="flex justify-between items-center mx-4 mb-4 p-4 shadow-2xl border border-darkblue text-black rounded" key={item.id}>
+                     <span className="flex justify-between items-center mx-4 mb-4 p-4 shadow-2xl border border-darkgreen text-black rounded" key={item.id}>
                         <img src={item.image} alt={item.name}
                            className="rounded w-12 h-12 object-cover"
                         />
@@ -32,8 +32,8 @@ const DropdownCart = ({ setIsDropdownOpen }) => {
                   ))}
                   
                </>
-            :  <div className="bg-gray-300 py-2 px-4 rounded">
-                  <p className="text-darkblue font-semibold text-lg ">Cart is Empty!</p>
+            :  <div className="bg-gray-200 border-darkgreen border py-2 px-4 rounded">
+                  <p className="text-darkgreen font-semibold text-lg ">Cart is Empty!</p>
                </div>
          
          }
