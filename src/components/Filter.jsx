@@ -9,7 +9,7 @@ const Filter = () => {
    
    return (
       <div className="flex flex-col sm:w-96 w-full bg-white mt-3 p-4 text-darkgreen h-56 sm:h-full">
-         <span className="pb-3 text-2xl sm:text-xl sm:text-left sm:ml-2 text-center">Filter Products</span>
+         <span className="pb-3 text-2xl sm:text-xl sm:text-left sm:ml-2 text-center font-medium underline">Filter Products</span>
          <div className="flex flex-row sm:flex-col justify-evenly">
             <div className="flex flex-col">
                <span className="text-lg sm:text-base sm:mb-2 sm:ml-1">

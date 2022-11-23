@@ -35,7 +35,7 @@ const Cart = () => {
          {cart.length > 0 
          ? <>
             {cart.map(item => (<CartItem key={item.id} item={item} />))}
-
+            
             <footer className="flex flex-col">
                <hr className="border border-transparent bg-black"/>
                <div className="text-center mt-4">

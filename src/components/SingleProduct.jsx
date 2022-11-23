@@ -5,7 +5,7 @@ import { addToCart, removeFromCart } from '../features/cart/cartSlice';
 import { Link } from 'react-router-dom';
 
 const SingleProduct = ({ item }) => {
-   const { id, name, price, image, inStock, ratings, fastDelivery } = item;
+   const { id, name, price, image, inStock, ratings, fastDelivery, numberOfRatedPeople } = item;
 
    const { cart } = useSelector(store => store.cart)
 
@@ -25,6 +25,7 @@ const SingleProduct = ({ item }) => {
             }
             <div className="flex flex-row">
                <Rating rating={ratings}/>
+               <span className="ml-1">({numberOfRatedPeople})</span>
             </div> 
          </div>
 

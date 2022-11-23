@@ -11,7 +11,8 @@ module.exports = {
         baseColor: "#F7F7F7",
       },
       gridTemplateColumns: {
-        "cartgrid": "auto 1fr auto"
+        "cartgrid": "auto 1fr auto",
+        "detail": "1.5fr 3fr",
       }
     },
     screens: {

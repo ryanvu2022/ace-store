@@ -8,5 +8,7 @@ export const products = images.map((image, index) => ({
    image: image,
    inStock: faker.datatype.boolean(),
    fastDelivery: faker.datatype.boolean(),
-   ratings: faker.commerce.price(1,5,0)
+   ratings: faker.commerce.price(1,5,0),
+   description: faker.commerce.productDescription() + ". " + faker.commerce.productDescription() + ".",
+   numberOfRatedPeople: faker.commerce.price(1,30,0),
 }))
