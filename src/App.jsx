@@ -11,15 +11,13 @@ function App() {
 
   return (
     <div>
-      <Navbar />
-      <div className="mt-20">
+      <Navbar />  
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/product/:productId" exact element={<ProductDetail />} />
           <Route path="*" element={<PageNotFound />} />
-        </Routes>
-      </div>
+        </Routes> 
       <Footer />
     </div>
   )

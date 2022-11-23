@@ -6,7 +6,7 @@ const Modal = () => {
    const dispatch = useDispatch();   
 
    return (
-     <aside className="fixed z-50 top-0 left-0 w-full h-full bg-black opacity-70 flex justify-center items-center">
+     <aside className="fixed z-50 top-0 left-0 w-full h-full bg-black opacity-100 flex justify-center items-center">
        <div className="bg-white rounded px-10 py-8 text-center">
          <h4 className="capitalize leading-normal mb-4 text-darkgreen font-bold text-xl">Remove all items from your shopping cart?</h4>
          <div className="flex justify-around">

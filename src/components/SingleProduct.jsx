@@ -12,13 +12,13 @@ const SingleProduct = ({ item }) => {
    const dispatch = useDispatch();
 
    return (
-      <div className="shadow-2xl sm:w-64 ss:w-72 w-88 m-2.5 p-4 rounded-md bg-white">
+      <div className="shadow-2xl sm:w-60 ss:w-72 w-80 m-2 p-3 rounded-md bg-white">
          <Link to={`/product/${id}`}>
             <img src={image} alt={name}/>
          </Link>
          <div>
             <h1 className="font-medium sm:text-base text-lg mt-1">{name}</h1>
-            <h5 className="tracking-wide font-medium text-lg">${price}</h5>
+            <h5 className="tracking-wide font-medium sm:text-base text-lg">CAD ${price}</h5>
             { fastDelivery
                ? <div className="text-lg sm:text-base">Fast Delivery</div>
                : <div className="text-lg sm:text-base">5 Days Delivery</div>
@@ -28,7 +28,7 @@ const SingleProduct = ({ item }) => {
             </div> 
          </div>
 
-         <div>
+         <div className="flex justify-center mt-2">
             {cart.some(p => p.id === id) && (
                <button className="transition-all duration-300 ease-linear text-lg sm:text-base bg-red-600 hover:bg-red-400 text-white py-2 px-4 mr-2 my-2 rounded-md" onClick={() => dispatch(removeFromCart(item.id))}>
                   Remove from Cart

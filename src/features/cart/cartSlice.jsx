@@ -4,7 +4,7 @@ export const cartSlice = createSlice({
    name: "cart",
    initialState: {
       cart: [],
-      total: 0,
+      subtotal: 0,
       amount: 0,
    },
    reducers: {
@@ -31,20 +31,20 @@ export const cartSlice = createSlice({
             state.amount -= 1;
          }
       },
-      calculateTotal: (state) => {
-         let total = 0;
+      calculateSubtotal: (state) => {
+         let subtotal = 0;
          let amount = 0
          state.cart.forEach(item => {
             amount += item.quantity;
-            total += item.quantity * item.price;
+            subtotal += item.quantity * item.price;
          })
          state.amount = amount
-         state.total = total;
+         state.subtotal = subtotal;
       }
       
    }
 })
 
-export const { clearCart, addToCart, removeFromCart, increase, decrease, calculateTotal } = cartSlice.actions;
+export const { clearCart, addToCart, removeFromCart, increase, decrease, calculateSubtotal } = cartSlice.actions;
 
 export default cartSlice.reducer;

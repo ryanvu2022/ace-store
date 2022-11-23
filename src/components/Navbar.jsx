@@ -4,6 +4,7 @@ import { CartIcon } from "../icons";
 import { Dropdown } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import DropdownCart from "./DropdownCart";
+import logo from "../products/logo";
 
 const Navbar = () => {
    const { amount } = useSelector(store => store.cart)
@@ -11,18 +12,20 @@ const Navbar = () => {
    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
    return (
-      <nav className="bg-darkgreen w-full px-8 py-5 text-white fixed z-50 inset-x-0 top-0">
+      <nav className="bg-baseColor max-w-[1280px] mx-auto w-full px-4 pb-2 pt-3 text-darkgreen sticky z-50 inset-x-0 top-0 border-b-2 border-x-2 block">
          <div className="w-full flex justify-between items-center m-0">
             <h2 className="mb-0 tracking-widest text-3xl cursor-pointer">
-               <Link to="/" onClick={() => setIsDropdownOpen(false)}>Middy - Redux</Link>
+               <Link to="/" onClick={() => setIsDropdownOpen(false)}>
+                  <img src={logo} className="h-16" />
+               </Link>
             </h2>
 
             <Dropdown>
                <Dropdown.Toggle>
-                  <div className="block relative cursor-pointer" onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
+                  <div className="block relative cursor-pointer mr-4" onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
                      <CartIcon />
                      <div className="absolute -top-2.5 -right-2.5 w-6 h-6 bg-lightgreen rounded-full flex items-center justify-center">
-                        <p className="mb-0 text-lg text-red-600">{amount}</p>
+                        <p className="mb-0 text-lg text-darkgreen font-medium">{amount}</p>
                      </div>              
                   </div>         
                </Dropdown.Toggle>
