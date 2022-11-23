@@ -1,8 +1,8 @@
-# middy-redux
+# ace-store
 The "Middy" Project - Redux Toolkit version
 
-Instead of using ***React Context API*** and ***React Hooks (useContext & useReducer)*** for state management,    
-This version uses ***Redux Toolkit*** to manage the state and ***Redux Dev Tools*** to track the state when developing.  
+Instead of using React Context API and React Hooks (useContext & useReducer),    
+This version uses ***Redux Toolkit*** for state management 
 
 Key features:  
 - Browse items
