@@ -25,6 +25,7 @@ export const productSlice = createSlice({
          state.byRating = 0;
          state.byFastDelivery = false;
          state.byStock = false;
+         state.sort = "";
       }
    }
 })

@@ -12,7 +12,6 @@ module.exports = {
       },
       gridTemplateColumns: {
         "cartgrid": "auto 1fr auto",
-        "detail": "1.5fr 3fr",
       }
     },
     screens: {

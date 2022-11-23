@@ -4,7 +4,7 @@ import { CartIcon } from "../icons";
 import { Dropdown } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import DropdownCart from "./DropdownCart";
-import logo from "../products/logo";
+import icons from "../products/icons";
 
 const Navbar = () => {
    const { amount } = useSelector(store => store.cart)
@@ -16,7 +16,7 @@ const Navbar = () => {
          <div className="w-full flex justify-between items-center m-0">
             <h2 className="mb-0 tracking-widest text-3xl cursor-pointer">
                <Link to="/" onClick={() => setIsDropdownOpen(false)}>
-                  <img src={logo} className="h-16" />
+                  <img src={icons.logo} className="h-16" />
                </Link>
             </h2>
 

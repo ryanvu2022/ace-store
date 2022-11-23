@@ -1,6 +1,7 @@
 import React from 'react';
 import { ChevronUp, ChevronDown } from '../icons';
 import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { removeFromCart, increase, decrease } from '../features/cart/cartSlice';
 
 const CartItem = ({ item }) => {
@@ -8,11 +9,12 @@ const CartItem = ({ item }) => {
 
    return (
       <div className="grid items-center grid-cols-cartgrid gap-x-6 my-6 mx-0">
-         <img src={item.image} alt={item.name} className="rounded w-24 h-24 object-cover" />
-
+         <Link to={`/product/${item.id}`}>
+            <img src={item.image} alt={item.name} className="rounded w-24 h-24 object-cover" />
+         </Link>
          <div>
             <h4 className="text-lg font-medium mb-2">{item.name}</h4>
-            <h4 className="font-medium mb-2 tracking-wider">${item.price}</h4>
+            <h4 className="font-medium mb-2 tracking-wider">CAD ${item.price}</h4>
             <button className="font-medium tracking-wide hover:text-red-600" onClick={() => dispatch(removeFromCart(item.id))}>
             Remove
             </button>

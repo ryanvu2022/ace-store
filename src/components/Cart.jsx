@@ -39,13 +39,13 @@ const Cart = () => {
             <footer className="flex flex-col">
                <hr className="border border-transparent bg-black"/>
                <div className="text-center mt-4">
-                  <h4 className="capitalize flex justify-between text-darkgreen font-medium text-xl mb-2 tracking-wider">
+                  <h4 className="capitalize flex justify-between font-medium text-xl mb-2 tracking-wider">
                      Subtotal <span>${subtotal.toFixed(2)}</span>
                   </h4>
-                  <h4 className="capitalize flex justify-between text-darkgreen font-medium text-xl mb-2 tracking-wider">
+                  <h4 className="capitalize flex justify-between font-medium text-xl mb-2 tracking-wider">
                      Tax (13%) <span>${tax.toFixed(2)}</span>
                   </h4>
-                  <h4 className="capitalize flex justify-between text-darkgreen font-medium text-xl mb-2 tracking-wider">
+                  <h4 className="capitalize flex justify-between font-medium text-xl mb-2 tracking-wider">
                      Total <span>${total.toFixed(2)}</span>
                   </h4>
                </div>
