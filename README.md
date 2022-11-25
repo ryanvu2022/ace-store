@@ -1,9 +1,6 @@
 # ace-store
 
-The "Middy" Project - Redux Toolkit version
-
-Instead of using React Context API and React Hooks (useContext & useReducer),  
-This version uses **_Redux Toolkit_** for state management.  
+A shopping cart, built with **_Redux Toolkit_** for state management.  
 Utilized **_React Router_** for dynamic routing
 
 Key features:
