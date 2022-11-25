@@ -27,8 +27,8 @@ const ProductDetail = () => {
                   <span className="ml-1">({numberOfRatedPeople})</span>
                   
                   { fastDelivery
-                     ? <span className="ml-10 tracking-wide">Fast Delivery</span>
-                     : <span className="ml-10 tracking-wide">5 Days Delivery</span>
+                     ? <span className="ml-4 tracking-wide">Fast Delivery</span>
+                     : <span className="ml-4 tracking-wide">5 Days Delivery</span>
                   }
                </div>
                <h2 className="md:text-xl sm:text-lg text-base">Details:</h2>
@@ -60,6 +60,12 @@ const ProductDetail = () => {
                </div>          
             </div>
          </div>
+         <div className="flex justify-center">
+            <Link to="/" className="transition-all duration-300 ease-linear text-center text-darkgreen text-xl items-center font-medium rounded hover:bg-hovergreen hover:text-white border-2 border-darkgreen mx-auto py-3 px-6 tracking-widest">
+               Continue shopping
+            </Link>   
+         </div>
+         
          <div className="flex flex-wrap justify-evenly text-base items-stretch">
             <div className="flex flex-col gap-4 ss:my-4 my-2 items-center border-2 md:p-8 p-4 w-36 ss:w-56 lg:w-64">
                <img src={icons.shipping} className="sm:w-16 ss:w-10 w-12"/>

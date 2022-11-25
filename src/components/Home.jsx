@@ -21,7 +21,7 @@ const Home = () => {
          sortedProducts = sortedProducts.filter(item => item.inStock)
       
       if (byRating)
-         sortedProducts = sortedProducts.filter(item => item.ratings == byRating)
+         sortedProducts = sortedProducts.filter(item => item.ratings >= byRating)
       
       return sortedProducts;
    }
