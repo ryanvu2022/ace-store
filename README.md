@@ -13,3 +13,8 @@ Key features:
 - Clear the cart, with pop-up modal to ask user for confirmation  
   in case they mistakenly click the _Clear cart_ button
 - Reset the cart
+
+
+
+https://user-images.githubusercontent.com/105618431/204038493-ac491415-4f37-4d0b-98cd-9933a17f1d61.mp4
+
