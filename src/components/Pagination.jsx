@@ -10,7 +10,7 @@ const Pagination = ({ productsPerPage, totalProducts, paginate }) => {
    return (
       <ul className="flex flex-wrap justify-center mx-10 mt-6">
          {pageNumbers.map(number => (
-            <li key={number} className="cursor-pointer border w-12 px-3 py-1 text-center border-darkblue text-lg hover:bg-lightblue" onClick={() => paginate(number)}>
+            <li key={number} className="cursor-pointer border w-12 px-3 py-1 text-center text-lg hover:bg-hovergreen border-darkgreen" onClick={() => paginate(number)}>
                {number}
             </li>
          ))}

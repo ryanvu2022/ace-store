@@ -11,24 +11,21 @@ export const cartSlice = createSlice({
       clearCart: (state) => {
          state.cart = []
       },
-      showProductDetail: (state, { payload }) => {
-         state.cart = state.cart.filter(item => item.id === payload)
-      },
       addToCart: (state, { payload }) => {
          state.cart.push({ ...payload, quantity: 1 })
          state.amount += 1;
       },
       removeFromCart: (state, { payload }) => {
-         state.cart = state.cart.filter(item => item.id !== payload);
+         state.cart = state.cart.filter(item => item._id !== payload);
          state.amount -= 1;
       },
       increase: (state, { payload }) => {
-         const item = state.cart.find(item => item.id === payload);
+         const item = state.cart.find(item => item._id === payload);
          item.quantity += 1;
          state.amount += 1;
       },
       decrease: (state, { payload }) => {
-         const item = state.cart.find(item => item.id === payload);
+         const item = state.cart.find(item => item._id === payload);
          if (item.quantity > 1) {
             item.quantity -= 1;
             state.amount -= 1;
@@ -44,10 +41,9 @@ export const cartSlice = createSlice({
          state.amount = amount
          state.subtotal = subtotal;
       }
-      
    }
-})
+});
 
-export const { clearCart, showProductDetail, addToCart, removeFromCart, increase, decrease, calculateSubtotal } = cartSlice.actions;
+export const { clearCart, addToCart, removeFromCart, increase, decrease, calculateSubtotal } = cartSlice.actions;
 
 export default cartSlice.reducer;

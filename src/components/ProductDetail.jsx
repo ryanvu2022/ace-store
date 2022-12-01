@@ -1,20 +1,41 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
 import Rating from './Rating';
 import { useParams } from 'react-router-dom';
-import { products } from '../products/products';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart, removeFromCart } from '../features/cart/cartSlice';
 import { Link } from 'react-router-dom';
 import icons from '../products/icons';
+import axios from "axios";
 
 const ProductDetail = () => {
    const { productId } = useParams();
    const { cart } = useSelector(store => store.cart)
    const dispatch = useDispatch();
 
-   const item = products.filter(item => item.id == productId)[0];
-   const { id, name, price, image, inStock, ratings, fastDelivery, description, numberOfRatedPeople } = item;
-   
+   const [loading, setLoading] = useState(false);
+   const [item, setItem] = useState({});
+
+   useEffect(() => {
+      const getProductDetail = async () => {
+         setLoading(true);
+         const response = await axios.get(`${import.meta.env.VITE_BACKEND_API}/${productId}`);
+         setItem(response.data);
+         setLoading(false);
+      }
+      if (productId && productId !== "") getProductDetail();
+   }, [productId]);
+
+   const { _id, name, price, image, inStock, ratings, fastDelivery, description, numberOfRatedPeople } = item;
+
+   if (loading) {
+      return <div className="flex justify-center mt-4">
+               <img src={icons.spinner} className="w-16" />
+               <img src={icons.spinner} className="w-16" />
+               <img src={icons.spinner} className="w-16" />
+            </div>
+
+   }
+
    return (
       <div className="flex flex-col gap-4">
          <div className="flex flex-col sm:flex-row gap-x-12 mt-12 mx-12">
@@ -35,12 +56,12 @@ const ProductDetail = () => {
                <p className="md:text-lg text-base">{description}</p>
                <h4 className="md:text-3xl sm:text-2xl text-3xl text-darkgreen font-medium mt-2">CAD ${price}</h4>
                <div className="flex gap-4">
-                  {cart.some(p => p.id === id) && (
-                     <button className="transition-all duration-300 ease-linear md:text-xl sm:text-lg tracking-wide bg-red-600 hover:bg-red-400 text-white md:py-3 sm:py-1 py-2 md:px-4 sm:px-2 px-4 my-2 rounded-md md:w-56 sm:w-48 mt-4" onClick={() => dispatch(removeFromCart(id))}>
+                  {cart.some(p => p._id === _id) && (
+                     <button className="transition-all duration-300 ease-linear md:text-xl sm:text-lg tracking-wide bg-red-600 hover:bg-red-400 text-white md:py-3 sm:py-1 py-2 md:px-4 sm:px-2 px-4 my-2 rounded-md md:w-56 sm:w-48 mt-4" onClick={() => dispatch(removeFromCart(_id))}>
                         Remove from Cart
                      </button>
                   )}
-                  {!cart.some(p => p.id === id) && inStock && (
+                  {!cart.some(p => p._id === _id) && inStock && (
                      <button className="transition-all duration-300 ease-linear md:text-xl sm:text-lg tracking-wide bg-darkgreen hover:bg-hovergreen text-white border-2 border-darkgreen md:py-3 sm:py-1 py-2 md:px-4 sm:px-2 px-4 my-2 rounded-md md:w-44 sm:w-36 mt-4" onClick={() => dispatch(addToCart(item))}>
                         Add to Cart
                      </button>
@@ -52,7 +73,7 @@ const ProductDetail = () => {
                   )}
                   {inStock && (
                      <Link to="/cart">
-                        <button className="transition-all duration-300 ease-linear md:text-xl sm:text-lg tracking-wide hover:text-white hover:bg-hovergreen text-darkgreen border-2 border-darkgreen md:py-3 sm:py-1 py-2 md:px-4 sm:px-2 px-4 my-2 rounded-md md:w-44 sm:w-36 mt-4" onClick={() => { if (!cart.some(p => p.id === id)) dispatch(addToCart(item)); }}>
+                        <button className="transition-all duration-300 ease-linear md:text-xl sm:text-lg tracking-wide hover:text-white hover:bg-hovergreen text-darkgreen border-2 border-darkgreen md:py-3 sm:py-1 py-2 md:px-4 sm:px-2 px-4 my-2 rounded-md md:w-44 sm:w-36 mt-4" onClick={() => { if (!cart.some(p => p._id === _id)) dispatch(addToCart(item)); }}>
                            Buy Now
                         </button>  
                      </Link>             

@@ -34,7 +34,7 @@ const Cart = () => {
          </header>
          {cart.length > 0 
          ? <>
-            {cart.map(item => (<CartItem key={item.id} item={item} />))}
+            {cart.map(item => (<CartItem key={item._id} item={item} />))}
             
             <footer className="flex flex-col">
                <hr className="border border-transparent bg-black"/>

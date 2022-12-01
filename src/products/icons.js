@@ -10,7 +10,7 @@ import tumblr from "./icons/tumblr.png";
 import youtube from "./icons/youtube.png";
 import snapchat from "./icons/snapchat.png";
 import tiktok from "./icons/tiktok.png";
-
+import spinner from "./icons/spinner.gif"
 
 const icons = {
    logo,
@@ -25,6 +25,7 @@ const icons = {
    youtube,
    snapchat,
    tiktok,
+   spinner
 }
 
 export default icons;
