@@ -17,7 +17,7 @@ const Home = () => {
    useEffect(() => {
       const getProducts = async () => {
          setLoading(true);
-         const response = await axios.get(import.meta.env.VITE_BACKEND_API);
+         const response = await axios.get("https://ace-store-api.onrender.com/products");
          setProducts(response.data);
          setLoading(false);
       }
