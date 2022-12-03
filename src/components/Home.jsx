@@ -13,14 +13,15 @@ const Home = () => {
    const [currentPage, setCurrentPage] = useState(1);
 
    const { data, error, isLoading, isError } = useGetProductsQuery();
+   console.log(data);
 
    const filterProducts = () => {
       let sortedProducts = data;
-      if (sort)
-         sortedProducts = sortedProducts.sort((a,b) => (
+      if (sort) {         
+         sortedProducts = sortedProducts.slice().sort((a,b) => (
             sort === "lowToHigh" ? a.price - b.price : b.price - a.price
          ));
-      
+      }
       if (byFastDelivery)
          sortedProducts = sortedProducts.filter(item => item.fastDelivery)
       
