@@ -12,16 +12,16 @@ const SingleProduct = ({ item }) => {
    const dispatch = useDispatch();
 
    return (
-      <div className="shadow-2xl sm:w-60 ss:w-72 w-80 m-2 p-3 rounded-md bg-white">
+      <div className="shadow-xl sm:w-60 ss:w-72 w-80 m-2 p-3 rounded-md bg-white">
          <Link to={`/product/${_id}`}>
             <img src={image} alt={name}/>
          </Link>
          <div>
-            <h1 className="font-medium sm:text-base text-lg mt-1">{name}</h1>
+            <h1 className="font-medium sm:text-xl text-lg mt-1">{name}</h1>
             <h5 className="tracking-wide font-medium sm:text-base text-lg">CAD ${price}</h5>
             { fastDelivery
-               ? <div className="text-lg sm:text-base">Fast Delivery</div>
-               : <div className="text-lg sm:text-base">5 Days Delivery</div>
+               ? <div className="text-lg sm:text-base">2 Days Delivery</div>
+               : <div className="text-lg sm:text-base">5-7 Days Delivery</div>
             }
             <div className="flex flex-row">
                <Rating rating={ratings}/>

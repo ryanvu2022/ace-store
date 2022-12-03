@@ -9,13 +9,13 @@ const Filter = () => {
    
    return (
       <div className="flex flex-col sm:w-96 w-full bg-white mt-3 p-4 text-darkgreen h-56 sm:h-full">
-         <span className="pb-3 text-2xl sm:text-xl sm:text-left sm:ml-2 text-center font-medium underline">Filter Products</span>
+         <span className="pb-3 text-2xl sm:text-xl sm:text-left sm:ml-2 text-center font-medium underline">Sort and Filter</span>
          <div className="flex flex-row sm:flex-col justify-evenly">
             <div className="flex flex-col">
                <span className="text-lg sm:text-base sm:mb-2 sm:ml-1">
                   <Form.Check 
                      inline
-                     label=" Price Low to High"
+                     label=" Lowest Price"
                      name="group1"
                      type="radio"
                      id={`inline-1`}
@@ -27,7 +27,7 @@ const Filter = () => {
                <span className="text-lg sm:text-base sm:mb-2 sm:ml-1">
                   <Form.Check 
                      inline
-                     label=" Price High to Low"
+                     label=" Highest Price"
                      name="group1"
                      type="radio"
                      id={`inline-2`}        
@@ -41,7 +41,7 @@ const Filter = () => {
                <span className="text-lg sm:text-base sm:mb-2 sm:ml-1">
                   <Form.Check 
                      inline
-                     label=" Fast Delivery"
+                     label=" 2 Days Delivery"
                      name="group1"
                      type="checkbox"
                      id={`inline-3`}
