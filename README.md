@@ -1,8 +1,9 @@
 # ace-store
 
 A shopping cart, built with **_Redux Toolkit_** for state management.  
-Utilized **_React Router_** for dynamic routing  
-Utilizied **_Axios_** to fetch all products and every single product
+Utilized **_React Router_** for dynamic routing.  
+Utilizied **_RTK Query_** to fetch data from the REST API.  
+(GitHub Repo for the API that I created for this project: https://github.com/ryanvu2022/ace-store-api)
 
 Key features:
 
