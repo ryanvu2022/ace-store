@@ -3,16 +3,12 @@ import SingleProduct from "./SingleProduct";
 import Filter from "./Filter";
 import { useSelector } from "react-redux";
 import Pagination from "./Pagination";
-import icons from "../products/icons";
-// import { useGetProductsQuery } from "../features/api/apiSlice";
 
 const Home = ({ data }) => {
    const { byRating, byFastDelivery, byStock, sort } = useSelector(store => store.product)
 
    const [productsPerPage] = useState(8);
    const [currentPage, setCurrentPage] = useState(1);
-
-   // const { data, error, isLoading, isError } = useGetProductsQuery();
 
    const filterProducts = () => {
       let sortedProducts = data;
@@ -36,14 +32,6 @@ const Home = ({ data }) => {
    const indexOfLastProduct = currentPage * productsPerPage;
    const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
    const paginate = (pageNumber) => setCurrentPage(pageNumber);
-
-   // if (isLoading) {
-   //    return <div className="flex justify-center mt-4">
-   //             <img src={icons.spinner} className="w-16" />
-   //          </div>
-   // } else if (isError) {
-   //    return <div>{error.toString()}</div>
-   // } 
 
    return (
       <div className="flex flex-col sm:flex-row bg-white">

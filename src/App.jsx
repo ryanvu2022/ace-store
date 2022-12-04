@@ -12,7 +12,7 @@ import icons from "./products/icons";
 function App() {
   const { data, error, isLoading, isError } = useGetProductsQuery();
 
-  if (isLoading) return <img src={icons.spinner} className="w-16 absolute top-1/2 left-1/2" />         
+  if (isLoading) return <img src={icons.spinner} className="w-16 absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]" />         
   else if (isError) return <div>{error.toString()}</div>
   
   return (

@@ -14,7 +14,7 @@ const ProductDetail = () => {
 
    const { data, isFetching } = useGetSingleProductQuery(productId);
 
-   if (isFetching) return <div className="flex justify-center items-center mt-4" ><img src={icons.spinner} className="w-16"/></div>
+   if (isFetching) return <img src={icons.spinner} className="w-16 absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]"/>
    
 
    return (
@@ -27,12 +27,11 @@ const ProductDetail = () => {
                   <span className="mr-2 tracking-wide">Rating:</span> 
                   <Rating rating={data.ratings}/>
                   <span className="ml-1">({data.numberOfRatedPeople})</span>
-                  
-                  { data.fastDelivery
-                     ? <span className="ml-4 tracking-wide">Fast Delivery</span>
-                     : <span className="ml-4 tracking-wide">5 Days Delivery</span>
-                  }
                </div>
+               { data.fastDelivery
+                  ? <p className="tracking-wide">2 Days Delivery</p>
+                  : <p className="tracking-wide">5-7 Days Delivery</p>
+               }
                <h2 className="md:text-xl sm:text-lg text-base">Details:</h2>
                <p className="md:text-lg text-base">{data.description}</p>
                <h4 className="md:text-3xl sm:text-2xl text-3xl text-darkgreen font-medium mt-2">CAD ${data.price}</h4>
