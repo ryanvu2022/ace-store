@@ -14,13 +14,8 @@ const ProductDetail = () => {
 
    const { data, isFetching } = useGetSingleProductQuery(productId);
 
-   if (isFetching) {
-      return <div className="flex justify-center mt-4">
-               <img src={icons.spinner} className="w-16" />
-               <img src={icons.spinner} className="w-16" />
-               <img src={icons.spinner} className="w-16" />
-            </div>
-   }
+   if (isFetching) return <div className="flex justify-center items-center mt-4" ><img src={icons.spinner} className="w-16"/></div>
+   
 
    return (
       <div className="flex flex-col gap-4">
