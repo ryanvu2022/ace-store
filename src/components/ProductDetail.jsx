@@ -29,8 +29,8 @@ const ProductDetail = () => {
                   <span className="ml-1">({data.numberOfRatedPeople})</span>
                </div>
                { data.fastDelivery
-                  ? <p className="tracking-wide">2 Days Delivery</p>
-                  : <p className="tracking-wide">5-7 Days Delivery</p>
+                  ? <p className="tracking-wide md:text-xl sm:text-lg text-base">2 Days Delivery</p>
+                  : <p className="tracking-wide md:text-xl sm:text-lg text-base">5-7 Days Delivery</p>
                }
                <h2 className="md:text-xl sm:text-lg text-base">Details:</h2>
                <p className="md:text-lg text-base">{data.description}</p>
