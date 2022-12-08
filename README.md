@@ -19,6 +19,10 @@ Key features:
 - Complete pagination for better user experience.
 - Reset the cart.
 
-https://user-images.githubusercontent.com/105618431/205422009-154fc502-fb0a-4998-9fb0-df7cb2c70322.mp4
+
+https://user-images.githubusercontent.com/105618431/206556982-05213013-467e-404c-b945-fbec7a37fdf7.mp4
+
+
+
 
 
