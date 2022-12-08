@@ -7,7 +7,7 @@ import Pagination from "./Pagination";
 const Home = ({ data }) => {
    const { byRating, byFastDelivery, byStock, sort } = useSelector(store => store.product)
 
-   const [productsPerPage] = useState(8);
+   const [productsPerPage] = useState(12);
    const [currentPage, setCurrentPage] = useState(1);
 
    const filterProducts = () => {
@@ -34,8 +34,8 @@ const Home = ({ data }) => {
    const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
    return (
-      <div className="flex flex-col sm:flex-row bg-white">
-         <div className="flex sm:w-56 w-full">
+      <div className="flex flex-col sm:flex-row bg-white items-start relative">
+         <div className="flex sm:w-56 w-full sticky top-24">
             <Filter />               
          </div> 
          <div className="flex flex-col">
