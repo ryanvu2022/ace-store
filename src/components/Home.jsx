@@ -35,7 +35,7 @@ const Home = ({ data }) => {
 
    return (
       <div className="flex flex-col sm:flex-row bg-white items-start relative">
-         <div className="flex sm:w-56 w-full sticky top-24">
+         <div className="flex sm:w-56 w-full sm:sticky sm:top-24">
             <Filter />               
          </div> 
          <div className="flex flex-col">
