@@ -5,7 +5,6 @@ import Home from "./components/Home";
 import Cart from "./components/Cart";
 import PageNotFound from "./components/PageNotFound";
 import ProductDetail from "./components/ProductDetail";
-import Footer from "./components/Footer";
 import { useGetProductsQuery } from "./features/api/apiSlice";
 import icons from "./products/icons";
 
@@ -24,7 +23,6 @@ function App() {
           <Route path="/product/:productId" exact element={<ProductDetail />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes> 
-      <Footer />
     </div>
   )
 }

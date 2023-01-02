@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import SingleProduct from "./SingleProduct";
 import Filter from "./Filter";
-import { useSelector } from "react-redux";
 import Pagination from "./Pagination";
+import Footer from "./Footer";
+import { useSelector } from "react-redux";
 
 const Home = ({ data }) => {
    const { byRating, byFastDelivery, byStock, sort } = useSelector(store => store.product)
@@ -52,7 +53,8 @@ const Home = ({ data }) => {
                totalProducts={filterProducts().length} 
                paginate={paginate}            
             />            
-         </div>              
+            <Footer />           
+         </div>   
       </div>
    )
 }

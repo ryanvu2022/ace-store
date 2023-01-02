@@ -1,10 +1,11 @@
 import React from "react";
 import Rating from './Rating';
+import Footer from "./Footer";
+import icons from '../products/icons';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart, removeFromCart } from '../features/cart/cartSlice';
 import { Link } from 'react-router-dom';
-import icons from '../products/icons';
 import { useGetSingleProductQuery } from "../features/api/apiSlice";
 
 const ProductDetail = () => {
@@ -85,6 +86,7 @@ const ProductDetail = () => {
                <p className="text-center">Secure <br/> Checkout</p>
             </div>                     
          </div>
+         <Footer />
       </div>
       
    )
